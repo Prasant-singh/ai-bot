@@ -1,0 +1,14 @@
+
+langchain
+langchain-community
+langchain_chroma
+openai
+ipykernel
+streamlit
+huggingface_hub
+
+
+
+in cmd write ollama run mistral
+cd chatbot
+streamlit run localama.py
