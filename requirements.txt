@@ -1,0 +1,44 @@
+
+langchain
+langchain-community
+langchain_chroma
+openai
+ipykernel
+streamlit
+huggingface_hub
+
+
+
+in cmd write ollama run mistral
+cd chatbot
+streamlit run localama.py
+
+
+
+
+
+to remove the model
+
+PS C:\Users\prasant singh> find ~/.ollama/ -name "*moondream*"
+File not found - *moondream*
+PS C:\Users\prasant singh> Get-ChildItem -Path "C:\Users\prasant singh" -Recurse -Filter "*moondream*"
+
+
+    Directory: C:\Users\prasant singh\.ollama\models\manifests\registry.ollama.ai\library
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        27-09-2024     11:35                moondream
+PS C:\Users\prasant singh> Remove-Item -Recurse -Force "C:\path\to\moondream-model"
+Remove-Item : Cannot find path 'C:\path\to\moondream-model' because it does not exist.
+At line:1 char:1
++ Remove-Item -Recurse -Force "C:\path\to\moondream-model"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\path\to\moondream-model:String) [Remove-Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+
+PS C:\Users\prasant singh> ollama uninstall moondream
+Error: unknown command "uninstall" for "ollama"
+PS C:\Users\prasant singh> Remove-Item -Recurse -Force "C:\Users\prasant singh\.ollama\models\manifests\registry.ollama.ai\library\moondream"
+PS C:\Users\prasant singh> ollama list
